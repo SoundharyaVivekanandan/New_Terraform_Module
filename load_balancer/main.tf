@@ -30,7 +30,7 @@ resource "aws_lb" "example_alb" {
   security_groups    = [aws_security_group.elb_security_group.id]
 }
 resource "aws_lb_listener" "example_listener" {
-  load_balancer_arn = aws_lb.example_elb.arn
+  load_balancer_arn = aws_lb.example_alb.arn
   port              = 80
   protocol          = "HTTP"
 
